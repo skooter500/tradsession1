@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c0qfv3ahy2r88"]
+
+[node name="player" type="XROrigin3D"]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="AudioListener3D" type="AudioListener3D" parent="XRCamera3D"]
+
+[node name="left" type="XRController3D" parent="."]
+tracker = &"left_hand"
+
+[node name="right" type="XRController3D" parent="."]
+tracker = &"right_hand"
