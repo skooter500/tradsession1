@@ -1,0 +1,182 @@
+[gd_scene load_steps=14 format=3 uid="uid://bp3wckjs4vy78"]
+
+[ext_resource type="Script" uid="uid://c12ghms4ummq0" path="res://scenes/node_3d.gd" id="1_648g8"]
+[ext_resource type="PackedScene" uid="uid://bnstuk747kcc" path="res://world_environment.tscn" id="2_f32b2"]
+[ext_resource type="PackedScene" uid="uid://b0md2olkx67fx" path="res://scene_switcher.tscn" id="3_6jgh4"]
+[ext_resource type="PackedScene" uid="uid://cswbvghw8htfo" path="res://yoga/headstand.fbx" id="4_jexl6"]
+[ext_resource type="PackedScene" uid="uid://cpugpcavjfvo1" path="res://scenes/fluteguy.tscn" id="4_k66be"]
+[ext_resource type="Material" path="res://Holo/matrix1.tres" id="5_krfxk"]
+[ext_resource type="Material" path="res://Holo/matrix2.tres" id="5_wtd4u"]
+[ext_resource type="Material" uid="uid://egxuqaeaebyn" path="res://scenes/hologram.tres" id="5_yle1b"]
+[ext_resource type="Script" uid="uid://cgs5f10b5rn2a" path="res://scenes/loop_animation.gd" id="6_2tyki"]
+[ext_resource type="AudioStream" uid="uid://djncgyybicwfp" path="res://audio/glitchy flute.mp3" id="7_mw02e"]
+[ext_resource type="Script" uid="uid://oy3ikxjkrjjs" path="res://SpatialAudioPlayer3D.gd" id="8_g7amr"]
+[ext_resource type="PackedScene" uid="uid://c0qfv3ahy2r88" path="res://player.tscn" id="9_dkq4m"]
+[ext_resource type="Script" uid="uid://we1e4lr5cxma" path="res://FPController.gd" id="10_vssks"]
+
+[node name="stage" type="Node3D"]
+script = ExtResource("1_648g8")
+
+[node name="SceneSwitcher" parent="." instance=ExtResource("3_6jgh4")]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("2_f32b2")]
+
+[node name="headstand" parent="." instance=ExtResource("4_jexl6")]
+
+[node name="Skeleton3D" parent="headstand" index="1"]
+bones/1/position = Vector3(0.369086, -0.846654, 0.895394)
+bones/1/rotation = Quaternion(0.732232, 0.007716, -0.0146752, 0.680854)
+bones/2/rotation = Quaternion(0.0129694, -0.0199019, 0.0222178, 0.999471)
+bones/4/rotation = Quaternion(0.52622, -0.472327, -0.52622, -0.472327)
+bones/5/rotation = Quaternion(-0.179141, -0.824433, 0.444394, 0.301217)
+bones/6/rotation = Quaternion(0.694302, -4.22829e-07, -2.45505e-06, 0.719684)
+bones/7/rotation = Quaternion(-0.17529, 0.144401, 0.219161, 0.948889)
+bones/9/rotation = Quaternion(0.375237, 0.0215983, -0.053536, 0.925129)
+bones/10/rotation = Quaternion(0.284902, -5.74034e-08, -2.95768e-07, 0.958557)
+bones/11/rotation = Quaternion(0.24479, 8.47546e-08, -2.25433e-07, 0.969576)
+bones/12/rotation = Quaternion(-0.184652, 0.908736, 0.368793, -0.0639822)
+bones/13/rotation = Quaternion(0.320514, -0.00230934, 0.00262381, 0.947237)
+bones/14/rotation = Quaternion(0.609475, 0.000790431, -0.00131813, 0.792804)
+bones/15/rotation = Quaternion(-0.00292202, -0.710457, -0.00289435, 0.703729)
+bones/16/rotation = Quaternion(0.226373, -9.41403e-05, -1.9196e-05, 0.974041)
+bones/17/rotation = Quaternion(0.301703, -1.56272e-07, -2.5586e-07, 0.953402)
+bones/18/rotation = Quaternion(0.309621, 5.18735e-08, -3.5329e-07, 0.95086)
+bones/19/rotation = Quaternion(-0.00324615, -0.71046, -0.00321537, 0.703723)
+bones/20/rotation = Quaternion(0.237998, -0.0115049, 0.046506, 0.970083)
+bones/21/rotation = Quaternion(0.315443, -2.09306e-07, -2.89412e-07, 0.948945)
+bones/22/rotation = Quaternion(0.274293, 1.93201e-09, -2.8427e-07, 0.961646)
+bones/23/rotation = Quaternion(-0.00345834, -0.710458, -0.00342556, 0.703723)
+bones/24/rotation = Quaternion(0.280195, -0.0257491, 0.0874792, 0.955602)
+bones/25/rotation = Quaternion(0.225659, -1.41125e-07, -1.87527e-07, 0.974206)
+bones/26/rotation = Quaternion(0.260004, -3.03442e-08, -2.45857e-07, 0.965607)
+bones/27/rotation = Quaternion(0.570602, 0.417628, 0.570602, -0.417628)
+bones/28/rotation = Quaternion(-0.40864, 0.713518, -0.182437, 0.539094)
+bones/29/rotation = Quaternion(0.823587, 3.45723e-07, 2.90745e-06, 0.567191)
+bones/30/rotation = Quaternion(-0.166192, 0.143256, -0.0813707, 0.972233)
+bones/31/rotation = Quaternion(0.313735, 0.893764, 0.319056, 0.0309742)
+bones/32/rotation = Quaternion(0.500194, 0.00174889, -0.00302558, 0.865906)
+bones/33/rotation = Quaternion(0.208737, -0.00128158, 0.000849087, 0.977971)
+bones/34/rotation = Quaternion(-0.00292204, 0.710462, 0.00289433, 0.703724)
+bones/35/rotation = Quaternion(0.194586, 9.32647e-05, 2.22011e-05, 0.980886)
+bones/36/rotation = Quaternion(0.292581, 2.946e-07, 8.34136e-09, 0.956241)
+bones/37/rotation = Quaternion(0.396581, 2.86209e-07, 2.96873e-07, 0.918)
+bones/38/rotation = Quaternion(-0.00324618, 0.710465, 0.00321534, 0.703718)
+bones/39/rotation = Quaternion(0.167483, -0.00182519, 0.0112856, 0.985809)
+bones/40/rotation = Quaternion(0.291332, 2.80075e-07, 1.32742e-08, 0.956622)
+bones/41/rotation = Quaternion(0.394506, 2.77067e-07, 3.3055e-07, 0.918894)
+bones/42/rotation = Quaternion(-0.00345837, 0.710463, 0.00342553, 0.703718)
+bones/43/rotation = Quaternion(0.144844, 0.00581575, -0.0390609, 0.988666)
+bones/44/rotation = Quaternion(0.116066, 1.5918e-07, -2.5898e-08, 0.993242)
+bones/45/rotation = Quaternion(0.291537, 3.20381e-07, 1.55167e-07, 0.95656)
+bones/47/rotation = Quaternion(0.353977, -0.00727831, 0.019534, 0.935022)
+bones/48/rotation = Quaternion(0.328143, 2.65197e-07, 1.52614e-07, 0.944628)
+bones/49/rotation = Quaternion(0.0899068, 6.81327e-08, 6.68921e-08, 0.99595)
+bones/51/rotation = Quaternion(-0.0126652, -0.0921271, -0.0109124, 0.995607)
+bones/53/rotation = Quaternion(0.988557, 0.107789, 0.104447, -0.0151136)
+bones/54/rotation = Quaternion(0.0743876, 4.75715e-08, -1.20979e-08, 0.997229)
+bones/55/rotation = Quaternion(-0.568095, -0.181207, 0.0141633, 0.80264)
+bones/56/rotation = Quaternion(-0.280399, 3.43063e-06, -9.96067e-07, 0.959884)
+bones/58/rotation = Quaternion(0.994749, -0.0880742, 0.0521272, 0.000820659)
+bones/59/rotation = Quaternion(0.0713685, -2.1402e-08, 2.79967e-08, 0.99745)
+bones/60/rotation = Quaternion(-0.56616, 0.0598906, -0.0155949, 0.821969)
+bones/61/rotation = Quaternion(-0.431416, 3.20407e-06, -1.5042e-06, 0.902153)
+
+[node name="preretarget_visual_0_BODY" parent="headstand/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("5_wtd4u")
+
+[node name="preretarget_visual_0_L_Wrist3" parent="headstand/Skeleton3D" index="1"]
+surface_material_override/0 = ExtResource("5_wtd4u")
+
+[node name="preretarget_visual_0_Neck3" parent="headstand/Skeleton3D" index="2"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_R_Ankle" parent="headstand/Skeleton3D" index="3"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_R_Arm1" parent="headstand/Skeleton3D" index="4"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_R_Arm2" parent="headstand/Skeleton3D" index="5"]
+surface_material_override/0 = ExtResource("5_wtd4u")
+
+[node name="preretarget_visual_0_R_Fingers" parent="headstand/Skeleton3D" index="6"]
+surface_material_override/0 = ExtResource("5_wtd4u")
+
+[node name="preretarget_visual_0_R_Foot" parent="headstand/Skeleton3D" index="7"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_R_Leg1" parent="headstand/Skeleton3D" index="8"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_R_Leg2" parent="headstand/Skeleton3D" index="9"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_R_sblade" parent="headstand/Skeleton3D" index="10"]
+visible = false
+
+[node name="preretarget_visual_0_L_Ankle" parent="headstand/Skeleton3D" index="11"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_R_Wrist3" parent="headstand/Skeleton3D" index="12"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_Spine1_3" parent="headstand/Skeleton3D" index="13"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_Spine2_3" parent="headstand/Skeleton3D" index="14"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_Torso" parent="headstand/Skeleton3D" index="15"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_L_Arm1" parent="headstand/Skeleton3D" index="16"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_L_Arm2" parent="headstand/Skeleton3D" index="17"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_L_Fingers" parent="headstand/Skeleton3D" index="18"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_L_Foot" parent="headstand/Skeleton3D" index="19"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_L_Leg1" parent="headstand/Skeleton3D" index="20"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_L_Leg2" parent="headstand/Skeleton3D" index="21"]
+surface_material_override/0 = ExtResource("5_krfxk")
+
+[node name="preretarget_visual_0_L_sblade" parent="headstand/Skeleton3D" index="22"]
+visible = false
+
+[node name="fluteguy" parent="." instance=ExtResource("4_k66be")]
+transform = Transform3D(0.763796, 0, -0.645457, 0, 1, 0, 0.645457, 0, 0.763796, -0.30828, 0, -0.80754)
+
+[node name="Alpha_Joints" parent="fluteguy/fluteb/Armature_001/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("5_yle1b")
+
+[node name="Alpha_Surface" parent="fluteguy/fluteb/Armature_001/Skeleton3D" index="1"]
+surface_material_override/0 = ExtResource("5_yle1b")
+
+[node name="AnimationPlayer" parent="fluteguy/fluteb" index="1"]
+script = ExtResource("6_2tyki")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="fluteguy"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0228854, 1.67689, -2.00061)
+stream = ExtResource("7_mw02e")
+autoplay = true
+script = ExtResource("8_g7amr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="player" parent="." instance=ExtResource("9_dkq4m")]
+script = ExtResource("10_vssks")
+
+[connection signal="animation_finished" from="fluteguy/fluteb/AnimationPlayer" to="fluteguy/fluteb/AnimationPlayer" method="_on_animation_finished"]
+[connection signal="button_pressed" from="player/left" to="SceneSwitcher" method="_on_left_button_pressed"]
+
+[editable path="headstand"]
+[editable path="fluteguy"]
+[editable path="player"]

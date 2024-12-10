@@ -10,15 +10,16 @@ config_version=5
 
 [application]
 
-config/name="IDPAT Afterparty 2024"
-run/main_scene="res://scenes/gen ai.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/name="Digital Education Conference 2024 at SETU"
+run/main_scene="uid://cw151s48axm75"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
 XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
+XrSimulator="*res://addons/xr-simulator/XRSimulator.tscn"
 
 [editor_plugins]
 
@@ -85,4 +86,5 @@ anti_aliasing/quality/msaa_3d=2
 
 openxr/enabled=true
 openxr/environment_blend_mode=2
+openxr/startup_alert=false
 shaders/enabled=true

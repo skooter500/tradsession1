@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=3 uid="uid://cw151s48axm75"]
 
-[ext_resource type="Script" path="res://scenes/node_3d.gd" id="1_almdi"]
+[ext_resource type="Script" uid="uid://c12ghms4ummq0" path="res://scenes/node_3d.gd" id="1_almdi"]
 [ext_resource type="PackedScene" uid="uid://bnstuk747kcc" path="res://world_environment.tscn" id="2_40pyf"]
 [ext_resource type="PackedScene" uid="uid://b0md2olkx67fx" path="res://scene_switcher.tscn" id="2_nyyyi"]
 [ext_resource type="PackedScene" uid="uid://cpugpcavjfvo1" path="res://scenes/fluteguy.tscn" id="2_vsoot"]
 [ext_resource type="AudioStream" uid="uid://djncgyybicwfp" path="res://audio/glitchy flute.mp3" id="4_34lea"]
 [ext_resource type="Material" uid="uid://egxuqaeaebyn" path="res://scenes/hologram.tres" id="4_quugy"]
-[ext_resource type="Script" path="res://scenes/loop_animation.gd" id="5_havyf"]
+[ext_resource type="Script" uid="uid://cgs5f10b5rn2a" path="res://scenes/loop_animation.gd" id="5_havyf"]
 [ext_resource type="PackedScene" uid="uid://c0qfv3ahy2r88" path="res://player.tscn" id="6_b0grn"]
-[ext_resource type="Script" path="res://SpatialAudioPlayer3D.gd" id="6_n1qou"]
-[ext_resource type="Script" path="res://FPController.gd" id="9_hjs0p"]
+[ext_resource type="Script" uid="uid://oy3ikxjkrjjs" path="res://SpatialAudioPlayer3D.gd" id="6_n1qou"]
+[ext_resource type="Script" uid="uid://we1e4lr5cxma" path="res://FPController.gd" id="9_hjs0p"]
 
 [node name="stage" type="Node3D"]
 script = ExtResource("1_almdi")
@@ -17,6 +17,7 @@ script = ExtResource("1_almdi")
 [node name="WorldEnvironment" parent="." instance=ExtResource("2_40pyf")]
 
 [node name="SceneSwitcher" parent="." instance=ExtResource("2_nyyyi")]
+scenes = Array[String](["scenes/scene1 flute.tscn", "scenes/scene2 flute.tscn", "scenes/scene3 concertina.tscn", "scenes/scene5 drum.tscn", "scenes/scene4 jharp.tscn", "scenes/scene6 flute.tscn", "scenes/scene7 flute.tscn", "scenes/gen ai1.tscn"])
 
 [node name="fluteguy" parent="." instance=ExtResource("2_vsoot")]
 transform = Transform3D(0.763796, 0, -0.645457, 0, 1, 0, 0.645457, 0, 0.763796, -0.30828, 0, -0.80754)
